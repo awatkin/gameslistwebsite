@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+
+#banner {
+    font-family: Consolas, sans-serif;
+    color: lime;
+    font-size: 30px;
+}
+
+#container {
+    margin: 40px;
+}
+
+#nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#nav li {
+    display: inline;
+    margin-right: 10px; /* optional, adds some spacing between list items */
+}
