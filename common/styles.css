@@ -14,6 +14,7 @@ body {
     margin: 40px;
 }
 
+
 #nav ul {
     list-style: none;
     padding: 0;
@@ -22,4 +23,22 @@ body {
 #nav li {
     display: inline;
     margin-right: 10px; /* optional, adds some spacing between list items */
+}
+
+table td {
+    transition: background-color 0.3s ease; /* Add transition */
+}
+
+table td:hover {
+    background-color: lightgray;
+}
+
+#error {
+    background-color: brown;
+    color: black;
+}
+
+#success {
+    background-color: darkgreen;
+    color: black;
 }

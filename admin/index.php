@@ -2,6 +2,9 @@
 
 session_start();  // start the session to access any sort of variables that might be about
 
+require_once "../common/admin_common.php";
+require_once "../common/db_connect.php";
+
 echo "<!DOCTYPE html>";
 
 echo "<html lang='en'>";
@@ -17,14 +20,14 @@ echo "<div id='container'>";
 
 include_once "admin_title.php";
 
-include 'admin_nav.php';
+include 'taadmin_nav.php';
 
 echo "<div id='content'>";
 
 echo "<h4> Admin System</h4>";
 
 echo "<br>";
-//echo admin_error($_SESSION);
+echo admin_error($_SESSION);
 
 echo "<br>";
 
