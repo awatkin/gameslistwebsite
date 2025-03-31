@@ -22,7 +22,14 @@ if (isset($_SESSION['admin_id'])){
 
         if($result){  // if there is a result returned
 
-            if (password_verify($_POST["password"], $result["password"])) { // verifies the password is matched
+            if($result['password'] == "REQUEST"){
+                $_SESSION['ERROR'] = "FIRST TIME LOGIN - SET YOUR PASSWORD";
+                $_SESSION["pwdset"] = true;
+                unset($_SERVER['REQUEST_METHOD']);
+                $_SESSION["admin_id"] = $result['admin_id'];  // sets up the session variables
+                header("Location: admin_passwordset.php");
+                exit; // Stop further execution
+            } elseif (password_verify($_POST["password"], $result["password"])) { // verifies the password is matched
                 $_SESSION["admin_id"] = $result['admin_id'];  // sets up the session variables
                 $_SESSION["priv"] = $result["priv"];
                 $_SESSION['SUCCESS'] = "Admin Successfully Logged In";
